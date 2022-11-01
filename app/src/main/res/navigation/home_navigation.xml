@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.techarion.techarion.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_allTaskFragment"
+            app:destination="@id/allTaskFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_createNewTaskFragment"
+            app:destination="@id/createNewTaskFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true"
+            app:popExitAnim="@anim/slide_out_left"
+            android:id="@+id/action_dashboardFragment_to_userActionActivity2"
+            app:destination="@id/userActionActivity" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_userCreateFragment"
+            app:destination="@id/userCreateFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_createdTaskByEmployeeFragment"
+            app:destination="@id/createdTaskByEmployeeFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_taskAssignedToEmployee"
+            app:destination="@id/taskAssignedToEmployee" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_attandance"
+            app:destination="@id/attandance" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_currentLocationFragment"
+            app:destination="@id/currentLocationFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/allTaskFragment"
+        android:name="com.techarion.techarion.employee.AllTaskFragment"
+        android:label="fragment_all_task_fraagment"
+        tools:layout="@layout/fragment_all_task_fraagment" >
+        <action
+            app:popUpTo="@id/userActionActivity"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_allTaskFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.techarion.techarion.employee.TaskDetailsFragment"
+        android:label="fragment_task_details"
+        tools:layout="@layout/fragment_task_details" >
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_allTaskFragment"
+            app:destination="@id/allTaskFragment" />
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_taskAssignedToEmployee"
+            app:destination="@id/taskAssignedToEmployee" />
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_createdTaskByEmployeeFragment"
+            app:destination="@id/createdTaskByEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewTaskFragment"
+        android:name="com.techarion.techarion.create_new_task.CreateNewTaskFragment"
+        android:label="fragment_create_new_task"
+        tools:layout="@layout/fragment_create_new_task" />
+    <activity
+        android:id="@+id/userActionActivity"
+        android:name="com.techarion.techarion.user_action.UserActionActivity"
+        android:label="activity_user_action"
+        tools:layout="@layout/activity_user_action" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.techarion.techarion.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/userCreateFragment"
+        android:name="com.techarion.techarion.user_create.UserCreateFragment"
+        android:label="UserCreateFragment" >
+
+        <action
+            android:id="@+id/action_userCreateFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createdTaskByEmployeeFragment"
+        android:name="com.techarion.techarion.employee.CreatedTaskByEmployeeFragment"
+        android:label="fragment_created_task_by_employess"
+        tools:layout="@layout/fragment_created_task_by_employess" >
+        <action
+            android:id="@+id/action_createdTaskByEmployeeFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskAssignedToEmployee"
+        android:name="com.techarion.techarion.employee.TaskAssignedToEmployee"
+        android:label="fragment_task_assigend_to_employee"
+        tools:layout="@layout/fragment_task_assigend_to_employee" >
+        <action
+            android:id="@+id/action_taskAssignedToEmployee_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attandance"
+        android:name="com.techarion.techarion.attadence.Attandance"
+        android:label="fragment_attandance"
+        tools:layout="@layout/fragment_attandance" >
+        <action
+            android:id="@+id/action_attandance_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentLocationFragment"
+        android:name="com.techarion.techarion.location.CurrentLocationFragment"
+        android:label="fragment_current_location"
+        tools:layout="@layout/fragment_current_location" />
+
+
+
+</navigation>

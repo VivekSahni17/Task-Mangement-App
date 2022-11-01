@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".login_ui.LoginFragment">
+
+    <ImageView
+        android:id="@+id/im_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/logo_greent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="-28dp"
+        app:cardCornerRadius="28dp"
+        app:cardBackgroundColor="@color/tech_arion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="25dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/txtView"
+                    android:text="@string/signup"
+                    android:layout_gravity="center"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_first_name"
+                    style="@style/AllEditText"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="First Name"
+                    android:inputType="text"
+                    android:maxLength="31" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_last_name"
+                    style="@style/AllEditText"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Last Name"
+                    android:inputType="text"
+                    android:maxLength="31" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmailAddress"
+                    style="@style/AllEditText"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="31" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_mobile_number"
+                    style="@style/AllEditText"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="@string/email"
+                    android:inputType="number"
+                    android:maxLength="31" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtIpLoginPass"
+                    app:endIconMode="password_toggle"
+                    app:hintAnimationEnabled="false"
+                    app:hintEnabled="false"
+                    app:endIconTint="@color/tech_arion"
+                    style="@style/AllEditText">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        style="@style/AllEditText"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:background="@drawable/edit_text_background"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:layout_marginEnd="28dp"-->
+<!--                    android:text="@string/forgot_password"/>-->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_sing_in"
+                    style="@style/ButtonStyle"
+                    android:backgroundTint="@color/white"
+                    android:text="SignIn" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_login"
+                style="@style/txtView"
+                android:text="Already have an account?.LogIn"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

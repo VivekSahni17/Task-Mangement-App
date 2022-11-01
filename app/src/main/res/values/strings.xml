@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TechArion</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">LogIn</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="dont_have_an_account_signup">Dont have an account?.Signup</string>
+    <string name="signup">SignUp</string>
+    <string name="verification">Verifiy OTP</string>
+    <string name="entertverication">Enter verification code or link sent to your mail or your mobile number</string>
+    <string name="submit">Submit</string>
+    <string name="didnot">If you Didn’t Recevied a Code! <font color='#0C3823'>Resend</font></string>
+    <string name="login_by_email">Login by email</string>
+    <string name="login_by_otp">Login by OTP</string>
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="dialog_permission_title">Permission required</string>
+    <string name="dialog_permission_default_message">Default message</string>
+    <string name="dialog_permission_button_positive">OK</string>
+    <string name="title_notification_reminder">Alert</string>
+    <string name="description_notification_reminder">Attandamce</string>
+    <string name="reminders_notification_channel_id">IMPORTANCE_HIGH</string>
+    <string name="reminders_notification_channel_name">Alart</string>
+    <string name="txt_error_message">%1$S*</string>
+    <string name="first_name">Full Name</string>
+    <string name="phone"></string>
+    <string name="full_name">Full Name</string>
+    <string name="designation">Designation</string>
+
+
+</resources>

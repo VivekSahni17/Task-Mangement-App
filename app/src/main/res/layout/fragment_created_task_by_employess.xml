@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeContainer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".employee.CreatedTaskByEmployeeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/im_back_arrow"-->
+<!--            android:layout_width="32dp"-->
+<!--            android:layout_height="28dp"-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:background="@drawable/ic_back_arrow"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/tv_all_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Task"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_task_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        tools:listitem="@layout/task_layout"
+        app:layout_constraintTop_toBottomOf="@+id/tv_all_task"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_nothing_found"
+        style="@style/noData"
+        android:text="Ooops! No Task"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="22dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:indeterminateTint="@color/button_txt_color"
+        android:background="@drawable/edit_text_background"
+        android:backgroundTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

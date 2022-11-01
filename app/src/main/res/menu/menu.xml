@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single"/>
+
+    <item
+        android:id="@+id/all_task"
+        android:title="All task"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/new_task"
+        android:title="Create new task"/>
+
+    <item
+        android:id="@+id/nav_assigned_task"
+        android:title="Assigned Task"/>
+
+    <item
+        android:id="@+id/nav_created_task"
+        android:title="Created Task"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/nav_current_location_frag"
+        android:title="Current Location"/>
+
+
+    <item
+        android:id="@+id/logot"
+        android:title="Logout"/>
+
+
+
+</menu>
